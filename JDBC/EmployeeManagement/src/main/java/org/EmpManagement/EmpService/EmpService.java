@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class EmpService implements EmpRepository {
 
     private static Connection con;
+    private static Scanner sc = new Scanner(System.in);
     Emp e = new Emp();
 
     static {
@@ -20,12 +21,11 @@ public class EmpService implements EmpRepository {
     @Override
     public void registerEmp() {
         String sql ="insert into employee values(?,?,?,?)";
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Employee Name");
-        e.setName(sc.nextLine());
-        System.out.println("Enter the Employee Age");
+        System.out.print("Enter the Employee Name:");
+        e.setName(sc.next());
+        System.out.print("Enter the Employee Age:");
         e.setAge(sc.nextInt());
-        System.out.println("Enter the Salary");
+        System.out.print("Enter the Salary:");
         e.setSal(sc.nextDouble());
         e.setId(getId()+1);
 
@@ -37,9 +37,10 @@ public class EmpService implements EmpRepository {
        pstm.setDouble(4,e.getSal());
        int rowsaffect =pstm.executeUpdate();
        if (rowsaffect>0){
-           System.out.println("\n ✅ Employee Registered Successfully!\n");
+           System.out.println("✅ Employee Registered Successfully! With id No :- "+e.getId());
+           sc.nextLine();
        }else{
-           System.out.println("\n ❌ Issue to Register Employee!\n");
+           System.out.println(" Issue to Register Employee!\n");
        }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -49,7 +50,6 @@ public class EmpService implements EmpRepository {
 
     @Override
     public void updateEmp() {
-        Scanner sc = new Scanner(System.in);
         String sql="update employee set sal=? where id=?";
         System.out.println("Enter the id U want to Update");
         e.setId(sc.nextInt());
@@ -74,10 +74,8 @@ public class EmpService implements EmpRepository {
     @Override
     public void deleteEmp() {
         String sql= "delete from employee where id = ?";
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Id You Want to Remove");
         e.setId(sc.nextInt());
-
         try {
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setInt(1,e.getId());
@@ -141,9 +139,27 @@ public class EmpService implements EmpRepository {
 
     @Override
     public void exit() {
+
         try {
+
             con.close();
+            Thread.sleep(500);
+            System.out.println("Thanks for Using Employee Management System");
+            System.out.print("Closing");
+            Thread.sleep(500);
+            System.out.print(".");
+            Thread.sleep(500);
+            System.out.print(".");
+            Thread.sleep(500);
+            System.out.print(".");
+            Thread.sleep(500);
+            System.out.print(".");
+            Thread.sleep(500);
+            System.out.print(".");
+            System.out.println("Exited");
         } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        } catch (InterruptedException ex) {
             throw new RuntimeException(ex);
         }
     }
