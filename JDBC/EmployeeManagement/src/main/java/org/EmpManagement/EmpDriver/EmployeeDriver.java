@@ -12,7 +12,7 @@ public class EmployeeDriver {
         Scanner sc = new Scanner(System.in);
         System.out.println("====================Enter Choice=======================");
         while(true){
-            System.out.println("1.Add Employee \n2.Update Details\n3.Delete Employee \n4.Fetch Employee\n5.Exit");
+            System.out.println("1.Add Employee \n2.Update Details\n3.Delete Employee \n4.Fetch Employee \n5.getDetailsByid \n6.Exit");
             int choice=sc.nextInt();
             switch (choice){
                 case 1:emp.registerEmp();
@@ -23,7 +23,9 @@ public class EmployeeDriver {
                 break;
                 case 4:emp.empDetails();
                 break;
-                case 5:emp.exit();
+                case 5:emp.getDetailsByid();
+                break;
+                case 6:emp.exit();
                 return;
                 default:
                     System.out.println("Enter the Wrong input");

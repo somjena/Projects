@@ -5,11 +5,15 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  <servlet-name>register</servlet-name>
-  <servlet-class>com.reg.Register</servlet-class>
+  <servlet-name>Area</servlet-name>
+  <servlet-class>com.reg.Area</servlet-class>
+  <init-param>
+  <param-name>pi</param-name>
+  <param-value>2</param-value>
+  </init-param>
   </servlet>
   <servlet-mapping>
-  <servlet-name>register</servlet-name>
-  <url-pattern>/register</url-pattern>
+  <servlet-name>Area</servlet-name>
+  <url-pattern>/area</url-pattern>
   </servlet-mapping>
 </web-app>

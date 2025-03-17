@@ -120,6 +120,26 @@ public class EmpService implements EmpRepository {
     }
 
     @Override
+    public void getDetailsByid() {
+        String sql = "select * from employee where id =?";
+        try {
+           PreparedStatement pr= con.prepareStatement(sql);
+            System.out.println("Enter the Id:");
+            int id = sc.nextInt();
+           pr.setInt(1,id);
+          ResultSet rs= pr.executeQuery();
+          if (rs.next()){
+              System.out.println(rs.getInt(1));
+              System.out.println(rs.getString(2));
+              System.out.println(rs.getInt(3));
+              System.out.println(rs.getDouble(4));
+          }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
     public int getId() {
        String Sql = "select * from employee";
        int id= 0;

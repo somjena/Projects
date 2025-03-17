@@ -99,3 +99,7 @@
 2025-03-10 15:24:02,879 [Worker-26: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.EmpManagement:EmployeeManagement:1.0-SNAPSHOT @ E:\Projects\JDBC\EmployeeManagement\pom.xml.
 2025-03-10 15:24:02,938 [Worker-26: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.JSPdemo:Demojsp:1.0-SNAPSHOT @ E:\Projects\JDBC\Demojsp\pom.xml.
 2025-03-10 15:24:02,992 [Worker-26: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.JSPdemo:Demojsp:1.0-SNAPSHOT @ E:\Projects\SERVLET\Demojsp\pom.xml.
+2025-03-16 23:06:04,887 [Worker-11: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-16 23:06:31,275 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-16 23:06:31,285 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory E:\Projects\JDBC\EmployeeManagement\src\test\resources
+2025-03-17 00:12:50,947 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
