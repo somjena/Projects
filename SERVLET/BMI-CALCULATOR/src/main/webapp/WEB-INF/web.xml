@@ -4,4 +4,20 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>Calculator</servlet-name>
+  <servlet-class>com.Servlets.Bmi_Calculator</servlet-class>
+  <init-param>
+  <param-name>square</param-name>
+  <param-value>2</param-value>
+  </init-param>
+  <init-param>
+  <param-name>foot</param-name>
+  <param-value>0.3048</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Calculator</servlet-name>
+  <url-pattern>/BMI</url-pattern>
+  </servlet-mapping>
 </web-app>
